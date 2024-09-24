@@ -1,6 +1,6 @@
 # MySQL Database
 
-Run a MySQL database by executing `init.sh`.  We use the Bitnami MySQL Helm chart and supply our own `values.yaml`.  Additional Kubernetes resources are installed using the `extraDeploy` field in the third-party Helm chart, which the resource definitions placed in the `extraDeploy` directory.
+Run a MySQL database by executing `init.sh`.  We use the Bitnami **MySQL** and **phpMyAdmin** Helm charts and supply our own values as necessary (see the `values` directory).  Additional resources are specified in the `pre` and `post` Helm charts (Secret, PersistentVolume, PersistentVolumeClaim, HTTPRoute).
 
 ### Creating the secret
 1. Copy the example secrets file:
@@ -10,3 +10,7 @@ Run a MySQL database by executing `init.sh`.  We use the Bitnami MySQL Helm char
    and edit as necessary.
 
 2. Run `create-secret.sh`.  You will get a new `secret.yaml` file in `pre/templates`.
+
+### Running MySQL
+
+Use `init.sh` and `delete.sh` to start and stop the MySQL service and its connected resources.
