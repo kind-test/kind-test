@@ -21,6 +21,9 @@ This repo contains configuration files for setting up a test cluster on Minikube
   ```
   In general, each service will have an `init.sh` and `delete.sh` script.
 
+> [!WARNING]
+> Some services will require additional setup before installation, for example the management of secrets. In general, a `*secrets.example*` file will be provided for templating.
+
 
 ## Port forwarding and SSH tunneling
 
