@@ -1,0 +1,12 @@
+nameOverride: ds-mysql
+fullnameOverride: ds-mysql
+namespaceOverride: elasticdt
+
+auth:
+  database: elasticdt
+  username: elasticdt
+  existingSecret: ds-mysql-secret
+
+# primary:
+#   persistence:
+#     existingClaim: ds-mysql-pvc

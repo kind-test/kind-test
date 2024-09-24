@@ -1,0 +1,4 @@
+**/mnt/
+**/*secret*
+!**/*secret.example*
+!**/*create-secret*.sh

@@ -1,0 +1,16 @@
+nameOverride: ds-mysql-phpmyadmin
+fullnameOverride: ds-mysql-phpmyadmin
+namespaceOverride: elasticdt
+
+db:
+  host: ds-mysql
+
+extraEnvVars:
+  - name: PMA_ABSOLUTE_URI
+    value: http://localhost:8000/phpmyadmin
+
+# Keep things simple and disable things we don't need
+pdb:
+  create: false
+serviceAccount:
+  create: false

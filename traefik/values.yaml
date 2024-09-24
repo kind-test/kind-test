@@ -1,0 +1,31 @@
+# Enable the Gateway provider but disable the default Ingress provider
+providers:
+  kubernetesIngress:
+    enabled: false
+  kubernetesGateway:
+    enabled: true
+
+# Allow the Gateway to expose HTTPRoute from all namespaces
+gateway:
+  listeners:
+    web:
+      namespacePolicy: All
+
+# Enable the dashboard
+ingressRoute:
+  dashboard:
+    enabled: true
+
+# Expose the service as a NodePort type on ports 30080 and 30443.
+# Expose the dashboard on port 39000. 
+service:
+  type: NodePort
+ports:
+  web:
+    nodePort: 30080
+  websecure:
+    nodePort: 30443
+  traefik:
+    expose:
+      default: true
+    nodePort: null
