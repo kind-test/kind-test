@@ -25,3 +25,5 @@ echo -e "\e[32m ###### INITIALIZING DS-NEO4J SERVICE #####\e[0m"
 echo
 helm install ds-neo4j neo4j/neo4j --version 5.23 -f values.yaml
 kubectl rollout status -n elasticdt statefulsets/ds-neo4j --timeout=60s
+
+echo -e "Neo4j browser\n:7474/browser/" > $(git root)/routes.d/neo4j

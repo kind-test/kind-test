@@ -52,4 +52,6 @@ echo
 echo -e "\e[32m ds-mysql installed!\e[0m"
 echo
 
+echo -e "phpMyAdmin\n:8000/phpmyadmin/" > $(git root)/routes.d/phpmyadmin
+
 popd

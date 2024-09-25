@@ -27,5 +27,7 @@ echo -e "\e[32m Traefik installed!\e[0m"
 echo -e "\e[32m Run the traefik/portforward.sh script to complete setup.\e[0m"
 echo
 
+echo -e "Traefik dashboard\n:9000/dashboard/" > $(git root)/routes.d/dashboard
+
 # Go back to the calling directory
 popd
