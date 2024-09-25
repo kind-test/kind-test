@@ -7,28 +7,19 @@ script_dir="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 pushd "$script_dir"
 
 echo
-echo -e "\e[32m ###### INITIALIZING ELASTICDT MINIKUBE CLUSTER #####\e[0m"
+echo -e "\e[32m ###### INITIALIZING ELASTICDT CLUSTER #####\e[0m"
 echo
 
-# Start minikube
-minikube start \
-   --addons=dashboard \
-   --addons=metrics-server \
-   --cpus=8 \
-   --memory=16g \
-   --profile=elasticdt \
-   --namespace=elasticdt
-
-# Set the minikube profile
-minikube profile elasticdt
+# Start kind
+kind create cluster -n elasticdt --config kind.yaml
+kubectl config use-context kind-elasticdt
 
 # Create the elasticdt namespace
 kubectl create ns elasticdt
-
-# Wait for a pod to become ready
-kubectl rollout status -n kubernetes-dashboard deploy/kubernetes-dashboard --timeout=30s
+kubectl config set-context --current --namespace=elasticdt
 
 # Launch initial set of services
+./dashboard/init.sh
 ./traefik/init.sh
 ./whoami/init.sh
 
