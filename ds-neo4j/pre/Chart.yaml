@@ -1,0 +1,4 @@
+apiVersion: v2
+name: ds-neo4j-pre
+version: 0.1.0
+description: Set up the prerequisite resources for Neo4j.

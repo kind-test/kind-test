@@ -1,0 +1,11 @@
+neo4j:
+  name: ds-neo4j
+  passwordFromSecret: ds-neo4j-secret
+
+volumes:
+  data:
+    mode: volume
+    volume:
+      setOwnerAndGroupWritableFilePermissions: true
+      persistentVolumeClaim:
+        claimName: ds-neo4j-pvc

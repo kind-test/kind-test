@@ -1,6 +1,9 @@
 #! /usr/bin/env bash
 # Initialize the Traefik service
 
+# helm repo add traefik https://traefik.github.io/charts
+# helm repo update
+
 # Enter the directory where this script is located
 # So we can grab the values.yaml file
 script_dir="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"

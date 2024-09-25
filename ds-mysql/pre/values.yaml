@@ -5,4 +5,4 @@ mainReleaseName: ds-mysql
 # specifications for the persistent volume
 persistence:
   size: 5Gi
-  hostPath: /mnt/elasticdt/mysql_data
+  hostPath: /data/mysql

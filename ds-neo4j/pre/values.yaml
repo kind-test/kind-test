@@ -1,0 +1,8 @@
+# VALUES FOR THE PRE-INSTALL CHART (SECRET, PV, PVC)
+
+mainReleaseName: ds-neo4j
+
+# specifications for the persistent volume
+persistence:
+  size: 5Gi
+  hostPath: /data/neo4j

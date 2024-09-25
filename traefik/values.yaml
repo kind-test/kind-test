@@ -10,6 +10,14 @@ gateway:
   listeners:
     web:
       namespacePolicy: All
+    # neo4j:
+    #   port: 7474
+    #   protocol: HTTP
+    #   namespacePolicy: All
+    # bolt:
+    #   port: 7867
+    #   protocol: HTTP
+    #   namespacePolicy: All
 
 # Enable the dashboard
 ingressRoute:
@@ -28,4 +36,15 @@ ports:
   traefik:
     expose:
       default: true
-    nodePort: null
+  # neo4j:
+  #   # neo4j uses port 7474 for http
+  #   port: 7474
+  #   exposedPort: 7474
+  #   expose:
+  #     default: true
+  # bolt:
+  #   # neo4j uses port 7687 for bolt
+  #   port: 7867
+  #   exposedPort: 7687
+  #   expose:
+  #     default: true

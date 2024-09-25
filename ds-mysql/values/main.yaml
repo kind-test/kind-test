@@ -7,6 +7,9 @@ auth:
   username: elasticdt
   existingSecret: ds-mysql-secret
 
-# primary:
-#   persistence:
-#     existingClaim: ds-mysql-pvc
+primary:
+  persistence:
+    existingClaim: ds-mysql-pvc
+
+volumePermissions:
+  enabled: true
