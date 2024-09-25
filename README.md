@@ -1,6 +1,6 @@
-# Test cluster using Minikube
+# Test cluster using `kind`
 
-This repo contains configuration files for setting up a test cluster on Minikube. See the 2nd-level `README.md` files for information about each component.
+This repo contains configuration files for setting up a test cluster on `kind`. See the 2nd-level `README.md` files for information about each component.
 
 - To launch the cluster: execute
   ```bash
