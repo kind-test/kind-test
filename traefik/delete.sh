@@ -1,8 +1,6 @@
 #! /usr/bin/env bash
 # Uninstall the Traefik service
 
-rm -f $(git root)/routes.d/dashboard
-
 echo
 echo -e "\e[32m ###### REMOVING TRAEFIK SERVICE #####\e[0m"
 echo

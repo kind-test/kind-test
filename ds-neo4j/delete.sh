@@ -1,8 +1,6 @@
 #! /usr/bin/env bash
 # Remove dashboard
 
-rm -f $(git root)/routes.d/neo4j
-
 helm uninstall ds-neo4j
 helm uninstall ds-neo4j-pre
 

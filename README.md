@@ -1,6 +1,9 @@
 # Test cluster using `kind`
 
-This repo contains configuration files for setting up a test cluster on `kind`. See the 2nd-level `README.md` files for information about each component.
+This repo contains configuration files for setting up a test cluster on `kind`. See the 2nd-level `README.md` files for information about each service.
+
+> [!NOTE]
+> **Terminology:** We will use "service" (lowercase) to refer to a logical unit in our cluster, and Service (uppercase) to refer specifically to the Kubernetes resource type.
 
 - To launch the cluster: execute
   ```bash

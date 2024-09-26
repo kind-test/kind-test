@@ -17,6 +17,4 @@ echo
 echo -e "\e[32m whoami installed!\e[0m"
 echo
 
-echo -e "hello\n:8000/hello" > $(git root)/routes.d/hello
-
 popd
