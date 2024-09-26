@@ -1,0 +1,6 @@
+apiVersion: v2
+name: ui-homepage
+version: 0.1.0
+
+# tag of the linked Docker image
+appVersion: "latest"

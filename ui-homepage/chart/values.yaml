@@ -1,0 +1,5 @@
+# The path to serve the service from in Traefik
+path: /homepage
+
+# The port for the service
+port: 80
