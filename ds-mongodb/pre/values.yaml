@@ -1,0 +1,8 @@
+# VALUES FOR THE PRE-INSTALL CHART (SECRET, PV, PVC)
+
+mainReleaseName: ds-mongodb
+
+# specifications for the persistent volume
+persistence:
+  size: 5Gi
+  hostPath: /data/mongodb

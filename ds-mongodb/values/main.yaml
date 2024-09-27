@@ -1,0 +1,29 @@
+nameOverride: ds-mongodb
+fullnameOverride: ds-mongodb
+namespaceOverride: elasticdt
+
+
+global:
+  mongodb:
+    auth:
+      existingSecret: ds-mongodb-secret
+
+auth:
+  enabled: true
+  rootUser: "root"
+  existingSecret: ds-mongodb-secret
+  usernames:
+    - elasticdt
+  databases:
+    - elasticdt
+
+useStatefulSet: true
+
+persistence:
+  existingClaim: ds-mongodb-pvc
+  size: 5Gi
+volumePermissions:
+  enabled: true
+
+pdb:
+  create: false

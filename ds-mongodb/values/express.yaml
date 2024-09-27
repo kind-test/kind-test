@@ -1,0 +1,11 @@
+nameOverride: ds-mongodb-express
+fullnameOverride: ds-mongodb-express
+
+mongodbServer: ds-mongodb
+mongodbEnableAdmin: true
+mongodbAdminPassword: super-secret-root-password
+basicAuthUsername: user
+basicAuthPassword: my-password
+
+pdb:
+  create: false
