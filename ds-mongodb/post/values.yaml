@@ -1,0 +1,7 @@
+mainReleaseName: ds-mongodb
+
+# The path to serve the service from in Traefik
+path: /mongo-express
+
+# The port for the service
+port: 80

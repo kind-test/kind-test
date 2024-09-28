@@ -6,6 +6,7 @@ mongodbEnableAdmin: true
 mongodbAdminPassword: super-secret-root-password
 basicAuthUsername: user
 basicAuthPassword: my-password
+siteBaseUrl: /mongo-express/
 
 pdb:
   create: false

@@ -1,0 +1,4 @@
+apiVersion: v2
+name: ds-mongodb-post
+version: 0.1.0
+description: Set up the post-install resources for MySQL.
