@@ -11,5 +11,5 @@ primary:
   persistence:
     existingClaim: ds-mysql-pvc
 
-volumePermissions:
-  enabled: true
+# volumePermissions:
+#   enabled: true

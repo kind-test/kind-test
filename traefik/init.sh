@@ -15,9 +15,10 @@ echo
 
 helm repo add traefik https://traefik.github.io/charts
 helm repo update
-kubectl create namespace traefik
 
-helm upgrade --install --version 31.1.1 --namespace traefik traefik traefik/traefik -f values.yaml
+helm upgrade --install --version 31.1.1 \
+  --namespace traefik --create-namespace \
+  traefik traefik/traefik -f values.yaml
 
 # Wait for the rollout to succeed
 kubectl rollout status -n traefik deploy/traefik --timeout=30s

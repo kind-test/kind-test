@@ -8,13 +8,13 @@ echo 'Installing Helm chart for Kubernetes dashboard...'
 echo
 
 helm install dashboard kubernetes-dashboard/kubernetes-dashboard \
--n monitoring --create-namespace \
---set metrics-server.enabled=true --wait --timeout 60s
+  -n monitoring --create-namespace \
+  --set metrics-server.enabled=true --wait --timeout 60s
 
 kubectl -n monitoring create \
-clusterrolebinding dashboard-kubernetes-dashboard \
---clusterrole=cluster-admin \
---serviceaccount=monitoring:default
+  clusterrolebinding dashboard-kubernetes-dashboard \
+  --clusterrole=cluster-admin \
+  --serviceaccount=monitoring:default
 
 
 echo "Kubernetes dashboard installed in the current \"$(kubectl config current-context)\" context."

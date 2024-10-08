@@ -22,6 +22,8 @@ kubectl config set-context --current --namespace=elasticdt
 ./dashboard/init.sh
 ./traefik/init.sh
 ./whoami/init.sh
+./ds-mysql/init.sh
+./ui-homepage/init.sh
 
 # Go back to the calling directory
 popd
